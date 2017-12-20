@@ -34,11 +34,15 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public void delete(User ob) {
-        userRepository.delete(ob);
+        if (userRepository.exists(ob.getId())){
+            userRepository.delete(ob);
+        }
     }
 
     @Override
     public void update(User ob) {
-        userRepository.save(ob);
+        if (userRepository.exists(ob.getId())){
+            userRepository.save(ob);
+        }
     }
 }

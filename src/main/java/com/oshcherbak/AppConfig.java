@@ -19,7 +19,7 @@ import java.util.Properties;
 @Configuration
 @EnableJpaRepositories
 @ComponentScan
-@PropertySource(value = { "classpath:application.properties" })
+@PropertySource(value = {"classpath:application.properties" })
 public class AppConfig {
 
     @Autowired
