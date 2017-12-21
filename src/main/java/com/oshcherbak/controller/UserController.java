@@ -94,7 +94,7 @@ public class UserController {
                     new RestWrapper<>(currentUser, "unable to update user, something went wrong, user not found", e.getMessage()),
                     HttpStatus.NOT_FOUND);
         }
-        if (user == null){
+        if (currentUser == null){
             return new ResponseEntity<>(
                     new RestWrapper<>(currentUser, "unable to update. User with id " + id + " not found.", null),
                     HttpStatus.NOT_FOUND);
@@ -124,7 +124,7 @@ public class UserController {
                     new RestWrapper<>(currentUser, "unable to update user, something went wrong, user not found", e.getMessage()),
                     HttpStatus.NOT_FOUND);
         }
-        if (user == null){
+        if (currentUser == null){
             return new ResponseEntity<>(
                     new RestWrapper<>(currentUser, "unable to update. User with id " + user.getId() + " not found.", null),
                     HttpStatus.NOT_FOUND);
